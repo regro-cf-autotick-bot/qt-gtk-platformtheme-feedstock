@@ -27,12 +27,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - qt-main {{ version }}             # [build_platform != target_platform]
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libglvnd-glx') }}          # [linux]
-    - {{ cdt('libglvnd-egl') }}          # [linux]
   host:
     - qt-main {{ version }}
     - glib
@@ -47,6 +41,9 @@ requirements:
     - xorg-libxcomposite
     - xorg-libxdamage
     - xorg-xineramaproto
+    - libgl-devel    # [linux]
+    - libegl-devel   # [linux]
+    - libglx-devel   # [linux]
   run:
     # We want to be pinned to the exact qt version
     - qt-main {{ version }}
