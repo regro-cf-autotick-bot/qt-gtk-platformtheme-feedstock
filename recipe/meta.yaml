@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   # ppc64le not yet built for qt6
   skip: true  # [ppc64le]
